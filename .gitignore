@@ -1,4 +1,4 @@
 *.mat
 GephiAnalysis/*
-*.DS_Store
+.DS_Store
 Paper/*
