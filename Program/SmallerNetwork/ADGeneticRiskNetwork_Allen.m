@@ -18,10 +18,10 @@ for gen=1:ADgenes_size(1,2);
     end
 end
 % sorting the indices of the gene location in the data from smallest to
-% largest
+% larges
 ADgenes_AllenBrain_genesnames_location=sort(ADgenes_AllenBrain_genesnames_location);
-
 AllenBrain_FreesurferROIs_corr_ADGeneticRiskNetwork=CorrMatrix(ADgenes_AllenBrain_genesnames_location,:);
-AllenBrain_FreesurferROIs_corr_ADGeneticRiskNetwork(AllenBrain_FreesurferROIs_corr_ADGeneticRiskNetwork<0.25)=0;
-
-save ADGeneticRiskNetwork_Allen.mat
+AllenBrain_FreesurferROIs_corr_ADGeneticRiskNetwork(AllenBrain_FreesurferROIs_corr_ADGeneticRiskNetwork<0.8)=0;
+% figure
+% histogram(AllenBrain_FreesurferROIs_corr_ADGeneticRiskNetwork(:));
+save ADGeneticRiskNetwork_Allen_8.mat
